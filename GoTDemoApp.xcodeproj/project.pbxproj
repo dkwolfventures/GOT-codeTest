@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177258EE27186023005CD4EC /* HouseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258ED27186023005CD4EC /* HouseTableViewController.swift */; };
+		177258F4271890D2005CD4EC /* GOTHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */; };
+		177258F627189C2B005CD4EC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F527189C2B005CD4EC /* Character.swift */; };
+		177258F827189C34005CD4EC /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F727189C34005CD4EC /* House.swift */; };
+		177258FA27189D0E005CD4EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F927189D0E005CD4EC /* Extension.swift */; };
+		177258FC27189E52005CD4EC /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258FB27189E52005CD4EC /* APICaller.swift */; };
+		177259002718A252005CD4EC /* NetworkResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258FF2718A252005CD4EC /* NetworkResponses.swift */; };
+		177259022718DBA5005CD4EC /* HouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177259012718DBA5005CD4EC /* HouseViewModel.swift */; };
+		17725904271902FE005CD4EC /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17725903271902FE005CD4EC /* HouseDetailViewController.swift */; };
 		342D972A212C9FC900EC6FE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342D9729212C9FC900EC6FE7 /* AppDelegate.m */; };
 		342D972D212C9FC900EC6FE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342D972C212C9FC900EC6FE7 /* ViewController.m */; };
 		342D9730212C9FC900EC6FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 342D972E212C9FC900EC6FE7 /* Main.storyboard */; };
@@ -18,7 +27,6 @@
 		342D975C212C9FEC00EC6FE7 /* GOTHouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 342D975B212C9FEC00EC6FE7 /* GOTHouse.m */; };
 		342D975F212CA09400EC6FE7 /* GOTCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 342D975E212CA09400EC6FE7 /* GOTCharacter.m */; };
 		34C26876212DE81A0086A8CA /* HouseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C26875212DE81A0086A8CA /* HouseTableViewCell.m */; };
-		34C26879212DEEF60086A8CA /* HouseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C26878212DEEF60086A8CA /* HouseDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177258EC27186022005CD4EC /* GoTDemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoTDemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		177258ED27186023005CD4EC /* HouseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewController.swift; sourceTree = "<group>"; };
+		177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseTableViewCell.swift; sourceTree = "<group>"; };
+		177258F527189C2B005CD4EC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		177258F727189C34005CD4EC /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		177258F927189D0E005CD4EC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		177258FB27189E52005CD4EC /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		177258FF2718A252005CD4EC /* NetworkResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponses.swift; sourceTree = "<group>"; };
+		177259012718DBA5005CD4EC /* HouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewModel.swift; sourceTree = "<group>"; };
+		17725903271902FE005CD4EC /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		342D9725212C9FC900EC6FE7 /* GoTDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		342D9728212C9FC900EC6FE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		342D9729212C9FC900EC6FE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,8 +79,6 @@
 		342D975E212CA09400EC6FE7 /* GOTCharacter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOTCharacter.m; sourceTree = "<group>"; };
 		34C26874212DE81A0086A8CA /* HouseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseTableViewCell.h; sourceTree = "<group>"; };
 		34C26875212DE81A0086A8CA /* HouseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseTableViewCell.m; sourceTree = "<group>"; };
-		34C26877212DEEF60086A8CA /* HouseDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseDetailViewController.h; sourceTree = "<group>"; };
-		34C26878212DEEF60086A8CA /* HouseDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,10 @@
 		177258E627185631005CD4EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				342D9728212C9FC900EC6FE7 /* AppDelegate.h */,
+				342D9729212C9FC900EC6FE7 /* AppDelegate.m */,
+				342D9731212C9FCA00EC6FE7 /* Assets.xcassets */,
+				177258F927189D0E005CD4EC /* Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -100,6 +120,7 @@
 		177258E72718563B005CD4EC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				177258FB27189E52005CD4EC /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -107,6 +128,7 @@
 		177258E827185645005CD4EC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				177259012718DBA5005CD4EC /* HouseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -114,6 +136,11 @@
 		177258E927185659005CD4EC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				342D972B212C9FC900EC6FE7 /* ViewController.h */,
+				342D972C212C9FC900EC6FE7 /* ViewController.m */,
+				177258ED27186023005CD4EC /* HouseTableViewController.swift */,
+				17725903271902FE005CD4EC /* HouseDetailViewController.swift */,
+				177258EC27186022005CD4EC /* GoTDemoApp-Bridging-Header.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +148,9 @@
 		177258EA27185665005CD4EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				34C26874212DE81A0086A8CA /* HouseTableViewCell.h */,
+				34C26875212DE81A0086A8CA /* HouseTableViewCell.m */,
+				177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +158,13 @@
 		177258EB2718566E005CD4EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				342D975D212CA09400EC6FE7 /* GOTCharacter.h */,
+				342D975E212CA09400EC6FE7 /* GOTCharacter.m */,
+				342D975A212C9FEC00EC6FE7 /* GOTHouse.h */,
+				342D975B212C9FEC00EC6FE7 /* GOTHouse.m */,
+				177258F727189C34005CD4EC /* House.swift */,
+				177258F527189C2B005CD4EC /* Character.swift */,
+				177258FF2718A252005CD4EC /* NetworkResponses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,23 +198,10 @@
 				177258E927185659005CD4EC /* Controllers */,
 				177258E72718563B005CD4EC /* Managers */,
 				177258E627185631005CD4EC /* Resources */,
-				342D9728212C9FC900EC6FE7 /* AppDelegate.h */,
-				342D9729212C9FC900EC6FE7 /* AppDelegate.m */,
-				34C26874212DE81A0086A8CA /* HouseTableViewCell.h */,
-				34C26875212DE81A0086A8CA /* HouseTableViewCell.m */,
-				342D972B212C9FC900EC6FE7 /* ViewController.h */,
-				342D972C212C9FC900EC6FE7 /* ViewController.m */,
-				34C26877212DEEF60086A8CA /* HouseDetailViewController.h */,
-				34C26878212DEEF60086A8CA /* HouseDetailViewController.m */,
 				342D972E212C9FC900EC6FE7 /* Main.storyboard */,
-				342D9731212C9FCA00EC6FE7 /* Assets.xcassets */,
 				342D9733212C9FCA00EC6FE7 /* LaunchScreen.storyboard */,
 				342D9736212C9FCA00EC6FE7 /* Info.plist */,
 				342D9737212C9FCA00EC6FE7 /* main.m */,
-				342D975D212CA09400EC6FE7 /* GOTCharacter.h */,
-				342D975E212CA09400EC6FE7 /* GOTCharacter.m */,
-				342D975A212C9FEC00EC6FE7 /* GOTHouse.h */,
-				342D975B212C9FEC00EC6FE7 /* GOTHouse.m */,
 			);
 			path = GoTDemoApp;
 			sourceTree = "<group>";
@@ -267,6 +291,7 @@
 				TargetAttributes = {
 					342D9724212C9FC900EC6FE7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1300;
 					};
 					342D973C212C9FCA00EC6FE7 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -330,13 +355,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177258F627189C2B005CD4EC /* Character.swift in Sources */,
 				342D972D212C9FC900EC6FE7 /* ViewController.m in Sources */,
 				342D9738212C9FCA00EC6FE7 /* main.m in Sources */,
 				34C26876212DE81A0086A8CA /* HouseTableViewCell.m in Sources */,
+				177258FA27189D0E005CD4EC /* Extension.swift in Sources */,
+				177259002718A252005CD4EC /* NetworkResponses.swift in Sources */,
+				177258EE27186023005CD4EC /* HouseTableViewController.swift in Sources */,
+				177259022718DBA5005CD4EC /* HouseViewModel.swift in Sources */,
 				342D972A212C9FC900EC6FE7 /* AppDelegate.m in Sources */,
-				34C26879212DEEF60086A8CA /* HouseDetailViewController.m in Sources */,
+				177258FC27189E52005CD4EC /* APICaller.swift in Sources */,
+				17725904271902FE005CD4EC /* HouseDetailViewController.swift in Sources */,
 				342D975F212CA09400EC6FE7 /* GOTCharacter.m in Sources */,
 				342D975C212C9FEC00EC6FE7 /* GOTHouse.m in Sources */,
+				177258F827189C34005CD4EC /* House.swift in Sources */,
+				177258F4271890D2005CD4EC /* GOTHouseTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,15 +538,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SZJ9T656N;
 				INFOPLIST_FILE = GoTDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ventures.darkwolf.gotDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoTDemoApp/Controllers/GoTDemoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -522,15 +560,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SZJ9T656N;
 				INFOPLIST_FILE = GoTDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ventures.darkwolf.gotDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoTDemoApp/Controllers/GoTDemoApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -538,6 +580,7 @@
 		342D9755212C9FCA00EC6FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
@@ -557,6 +600,7 @@
 		342D9756212C9FCA00EC6FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
@@ -576,6 +620,7 @@
 		342D9758212C9FCA00EC6FE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
 				INFOPLIST_FILE = GoTDemoAppUITests/Info.plist;
@@ -594,6 +639,7 @@
 		342D9759212C9FCA00EC6FE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
 				INFOPLIST_FILE = GoTDemoAppUITests/Info.plist;
