@@ -19,22 +19,25 @@ class GotUnitTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
     func testHouseModel_canCreateInstance(){
         let instance = House(url: "www.test.com", name: "stark", region: "north", words: "we are the north", titles: ["king of the north", "northern stone throne"], currentLord: "ricardo", heir: "lil jimmy", founded: "in the ancient times", swornMembers: ["mike","rob","jakob"])
         
+        XCTAssertNotNil(instance)
+    }
+    
+    func testHouseModel_canCreateAttributes(){
         
+        let house = House(url: "www.test.com", name: "stark", region: "north", words: "we are the north", titles: ["king of the north", "northern stone throne"], currentLord: "ricardo", heir: "lil jimmy", founded: "in the ancient times", swornMembers: ["mike","rob","jakob"])
+        
+        let attributes = house.houseAttributes()
+        
+        XCTAssertNotNil(attributes)
+    }
+    
+    func testCharacterModel_canCreateInstance(){
+        let instance = Character(url: "www.test.com", name: "edward", born: "a cool july morning", titles: ["th disappointment"])
+        
+        XCTAssertNotNil(instance)
     }
 
 }
