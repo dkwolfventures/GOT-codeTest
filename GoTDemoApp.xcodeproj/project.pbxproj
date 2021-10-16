@@ -117,6 +117,15 @@
 			path = DetailControllerHeaderView;
 			sourceTree = "<group>";
 		};
+		17523778271B61A30071E724 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				342D972E212C9FC900EC6FE7 /* Main.storyboard */,
+				342D9733212C9FCA00EC6FE7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		175348612719EE3A000E3020 /* DetailControllerCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +153,7 @@
 				342D9729212C9FC900EC6FE7 /* AppDelegate.m */,
 				342D9731212C9FCA00EC6FE7 /* Assets.xcassets */,
 				177258F927189D0E005CD4EC /* Extension.swift */,
+				17523778271B61A30071E724 /* Storyboards */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -223,8 +233,6 @@
 				177258E927185659005CD4EC /* Controllers */,
 				177258E72718563B005CD4EC /* Managers */,
 				177258E627185631005CD4EC /* Resources */,
-				342D972E212C9FC900EC6FE7 /* Main.storyboard */,
-				342D9733212C9FCA00EC6FE7 /* LaunchScreen.storyboard */,
 				342D9736212C9FCA00EC6FE7 /* Info.plist */,
 				342D9737212C9FCA00EC6FE7 /* main.m */,
 			);
