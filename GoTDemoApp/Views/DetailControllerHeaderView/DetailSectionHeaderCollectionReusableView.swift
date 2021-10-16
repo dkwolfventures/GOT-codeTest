@@ -44,7 +44,7 @@ class DetailSectionHeaderCollectionReusableView: UICollectionReusableView {
         
         switch index {
         case 0:
-            headerLabel.text = "Houose Facts"
+            headerLabel.text = "House Facts"
             
         case 1:
             headerLabel.text = "Leadership"
