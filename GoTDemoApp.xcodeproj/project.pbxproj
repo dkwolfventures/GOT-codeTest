@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17523772271B23980071E724 /* DetailSectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17523771271B23980071E724 /* DetailSectionHeaderCollectionReusableView.swift */; };
+		17523774271B32C50071E724 /* SwornMembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17523773271B32C50071E724 /* SwornMembersViewModel.swift */; };
+		17523777271B44DD0071E724 /* GotUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17523776271B44DD0071E724 /* GotUnitTests.swift */; };
 		175348602719DEB3000E3020 /* HouseDetailSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753485F2719DEB3000E3020 /* HouseDetailSectionType.swift */; };
 		175348632719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175348622719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift */; };
 		17534866271A4C32000E3020 /* HouseAttributeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */; };
@@ -52,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17523771271B23980071E724 /* DetailSectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		17523773271B32C50071E724 /* SwornMembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMembersViewModel.swift; sourceTree = "<group>"; };
+		17523775271B44DC0071E724 /* GoTDemoAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoTDemoAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		17523776271B44DD0071E724 /* GotUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotUnitTests.swift; sourceTree = "<group>"; };
 		1753485F2719DEB3000E3020 /* HouseDetailSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailSectionType.swift; sourceTree = "<group>"; };
 		175348622719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAttributeCollectionViewCell.swift; sourceTree = "<group>"; };
 		17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAttributeViewModel.swift; sourceTree = "<group>"; };
@@ -116,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17523770271B23730071E724 /* DetailControllerHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				17523771271B23980071E724 /* DetailSectionHeaderCollectionReusableView.swift */,
+			);
+			path = DetailControllerHeaderView;
+			sourceTree = "<group>";
+		};
 		1753485E2719DE92000E3020 /* Detail View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +154,7 @@
 			children = (
 				17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */,
 				17534867271A6E80000E3020 /* LeadershipCellViewModel.swift */,
+				17523773271B32C50071E724 /* SwornMembersViewModel.swift */,
 			);
 			path = DetailViewModels;
 			sourceTree = "<group>";
@@ -189,6 +205,7 @@
 				34C26874212DE81A0086A8CA /* HouseTableViewCell.h */,
 				34C26875212DE81A0086A8CA /* HouseTableViewCell.m */,
 				177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */,
+				17523770271B23730071E724 /* DetailControllerHeaderView */,
 				175348612719EE3A000E3020 /* DetailControllerCells */,
 			);
 			path = Views;
@@ -249,7 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				342D9741212C9FCA00EC6FE7 /* GoTDemoAppTests.m */,
+				17523776271B44DD0071E724 /* GotUnitTests.swift */,
 				342D9743212C9FCA00EC6FE7 /* Info.plist */,
+				17523775271B44DC0071E724 /* GoTDemoAppTests-Bridging-Header.h */,
 			);
 			path = GoTDemoAppTests;
 			sourceTree = "<group>";
@@ -334,6 +353,7 @@
 					};
 					342D973C212C9FCA00EC6FE7 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1300;
 						TestTargetID = 342D9724212C9FC900EC6FE7;
 					};
 					342D9747212C9FCA00EC6FE7 = {
@@ -409,10 +429,12 @@
 				342D972A212C9FC900EC6FE7 /* AppDelegate.m in Sources */,
 				177258FC27189E52005CD4EC /* APICaller.swift in Sources */,
 				17725904271902FE005CD4EC /* HouseDetailViewController.swift in Sources */,
+				17523772271B23980071E724 /* DetailSectionHeaderCollectionReusableView.swift in Sources */,
 				342D975F212CA09400EC6FE7 /* GOTCharacter.m in Sources */,
 				342D975C212C9FEC00EC6FE7 /* GOTHouse.m in Sources */,
 				177258F827189C34005CD4EC /* House.swift in Sources */,
 				177258F4271890D2005CD4EC /* GOTHouseTableViewCell.swift in Sources */,
+				17523774271B32C50071E724 /* SwornMembersViewModel.swift in Sources */,
 				1753486A271A6F2E000E3020 /* LeadershipCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17523777271B44DD0071E724 /* GotUnitTests.swift in Sources */,
 				342D9742212C9FCA00EC6FE7 /* GoTDemoAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +649,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
 				INFOPLIST_FILE = GoTDemoAppTests/Info.plist;
@@ -636,6 +660,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vaporstream.GoTDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoTDemoAppTests/GoTDemoAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoTDemoApp.app/GoTDemoApp";
 			};
@@ -646,6 +673,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YU6R43WJR9;
 				INFOPLIST_FILE = GoTDemoAppTests/Info.plist;
@@ -656,6 +684,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vaporstream.GoTDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoTDemoAppTests/GoTDemoAppTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoTDemoApp.app/GoTDemoApp";
 			};

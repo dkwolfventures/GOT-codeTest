@@ -13,7 +13,11 @@ class SwornMemberCollectionViewCell: UICollectionViewCell {
     //MARK: - properties
     static let identifier = "SwornMemberCollectionViewCell"
     
-    public let nameLabel: UILabel = {
+    var viewModel: SwornMembersViewModel?{
+        didSet{configure()}
+    }
+    
+    private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
         return label
@@ -42,7 +46,19 @@ class SwornMemberCollectionViewCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        nameLabel.text = ""
+    }
+    
+    public func configure(){
         
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        nameLabel.text = viewModel.name
+    }
+    
+    public func configOffIdx(){
         nameLabel.text = nil
     }
 }

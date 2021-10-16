@@ -10,12 +10,10 @@ import Foundation
 
 struct House: Codable {
     let url: String
-    let name, region, coatOfArms, words: String
-    let titles, seats: [String]
-    let currentLord, heir, overlord: String
-    let founded, founder, diedOut: String
-    let ancestralWeapons: [String]
-    let cadetBranches: [String]
+    let name, region, words: String
+    let titles: [String]
+    let currentLord, heir: String
+    let founded: String
     let swornMembers: [String]
     
     func houseAttributes() -> [String:String]{

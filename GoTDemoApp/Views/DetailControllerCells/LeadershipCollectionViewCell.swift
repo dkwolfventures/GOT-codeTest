@@ -99,4 +99,14 @@ class LeadershipCollectionViewCell: UICollectionViewCell {
         dobLabel.text = viewModel.born.replacingOccurrences(of: "In", with: "Born:")
         titlesLabel.text = viewModel.titleOrTitles + ":\n" + viewModel.titles.joined(separator: ",\n")
     }
+    
+    public func configureForNoData(with index: Int){
+        
+        leaderTitleLabel.text = "No Lord"
+        
+        if index == 1{
+            leaderTitleLabel.text = "No Heir"
+        }
+        
+    }
 }

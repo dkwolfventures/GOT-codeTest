@@ -35,6 +35,11 @@ class HouseDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -42,6 +47,7 @@ class HouseDetailViewController: UIViewController {
         configureHouseChars()
         configureHouseAttributes()
         fetchCharacters()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,10 +65,8 @@ class HouseDetailViewController: UIViewController {
     
     private func configureHouseChars(){
         
-        if house.swornMembers.count > 0 {
-            for member in house.swornMembers {
-                allUrls.append(member)
-            }
+        for member in house.swornMembers {
+            allUrls.append(member)
         }
         
     }
@@ -107,6 +111,7 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HouseAttributeCollectionViewCell.identifier, for: indexPath) as! HouseAttributeCollectionViewCell
             
             let index = houseAttributes.index(houseAttributes.startIndex, offsetBy: indexPath.row)
+            
             cell.titleLabel.text = houseAttributes.keys[index]
             cell.subTitleLabel.text = houseAttributes.values[index]
             
@@ -125,7 +130,7 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
                     cell.configure(with: indexPath.row, viewModel: viewModel)
                     
                 } else {
-                    cell.leaderTitleLabel.text = "No Lord"
+                    cell.configureForNoData(with: indexPath.row)
                 }
                 
             } else if indexPath.row == 1 {
@@ -135,7 +140,7 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
                     let viewModel = LeadershipCellViewModel(character: heir)
                     cell.configure(with: indexPath.row, viewModel: viewModel)
                 } else {
-                    cell.leaderTitleLabel.text = "No Heir"
+                    cell.configureForNoData(with: indexPath.row)
                 }
             }
             
@@ -145,7 +150,8 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SwornMemberCollectionViewCell.identifier, for: indexPath) as! SwornMemberCollectionViewCell
             
-            cell.nameLabel.text = allCharacters[indexPath.row].name
+            cell.viewModel = SwornMembersViewModel(char: allCharacters[indexPath.row])
+            
             
             return cell
             
@@ -155,7 +161,30 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
         
     }
 
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: DetailSectionHeaderCollectionReusableView.identifier, for: indexPath) as! DetailSectionHeaderCollectionReusableView
+        
+        let section = indexPath.section
 
+        switch (section) {
+        
+        case 0:
+            
+            header.configure(with: section)
+            return header
+        case 1:
+            
+            header.configure(with: section)
+            return header
+        case 2:
+            
+            header.configure(with: section)
+            return header
+        default:
+            fatalError()
+        }
+        
+    }
 }
 
 //MARK: - fetchCharacters
@@ -207,24 +236,22 @@ extension HouseDetailViewController {
             }
         }
         
-        if allUrls.count > 2 {
-            for x in 2..<allUrls.count {
-                characterGroup.enter()
-                APICaller.shared.fetchCharacter(characterUrl: allUrls[x]) { [weak self] result in
-                    defer {
-                        characterGroup.leave()
+        for x in 0..<allUrls.count {
+            characterGroup.enter()
+            APICaller.shared.fetchCharacter(characterUrl: allUrls[x]) { [weak self] result in
+                defer {
+                    characterGroup.leave()
+                }
+                
+                switch result {
+                case .success(let swornMember):
+                    
+                    if swornMember.name != self?.lord?.name || swornMember.name != self?.heir?.name{
+                        allCharacters.append(swornMember)
                     }
                     
-                    switch result {
-                    case .success(let swornMember):
-                        
-                        if swornMember.name != self?.lord?.name || swornMember.name != self?.heir?.name {
-                            allCharacters.append(swornMember)
-                        }
-                        
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
         }
@@ -232,7 +259,9 @@ extension HouseDetailViewController {
         characterGroup.notify(queue: .main) {
             self.allCharacters = allCharacters
             DispatchQueue.main.async {
+                
                 self.setUpCollectionView()
+                
             }
         }
         
@@ -253,7 +282,7 @@ extension HouseDetailViewController {
             frame: .zero,
             collectionViewLayout: layout
         )
-        
+        collectionView.register(DetailSectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: DetailSectionHeaderCollectionReusableView.identifier)
         collectionView.register(HouseAttributeCollectionViewCell.self, forCellWithReuseIdentifier: HouseAttributeCollectionViewCell.identifier)
         collectionView.register(LeadershipCollectionViewCell.self, forCellWithReuseIdentifier: LeadershipCollectionViewCell.identifier)
         collectionView.register(SwornMemberCollectionViewCell.self, forCellWithReuseIdentifier: SwornMemberCollectionViewCell.identifier)
@@ -296,6 +325,15 @@ extension HouseDetailViewController {
         
             sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0)
             
+            sectionLayout.boundarySupplementaryItems = [
+                NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(30)),
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+            ]
+            
             return sectionLayout
             
         case 1:
@@ -319,6 +357,18 @@ extension HouseDetailViewController {
             //section layou
             let sectionLayout = NSCollectionLayoutSection(group: group)
             sectionLayout.orthogonalScrollingBehavior = .continuous
+            
+            sectionLayout.boundarySupplementaryItems = [
+                NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(30)),
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+            ]
+            
+                sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0)
+                
             return sectionLayout
             
         case 2:
@@ -342,7 +392,14 @@ extension HouseDetailViewController {
             
             let sectionLayout = NSCollectionLayoutSection(group: group)
         
-            sectionLayout.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 0, bottom: 0, trailing: 0)
+            sectionLayout.boundarySupplementaryItems = [
+                NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: NSCollectionLayoutSize(
+                        widthDimension: .fractionalWidth(1),
+                        heightDimension: .absolute(30)),
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+            ]
             
             return sectionLayout
             
