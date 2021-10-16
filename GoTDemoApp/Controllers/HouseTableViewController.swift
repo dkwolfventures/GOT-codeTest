@@ -81,7 +81,8 @@ class HouseTableViewController: UITableViewController {
     private func goToHouse(_ house: House){
         
         let vc = HouseDetailViewController(house)
-        vc.title = house.name
+        vc.title = house.name.replacingOccurrences(of: "House ", with: "")
+        
         show(vc, sender: self)
         
     }

@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175348602719DEB3000E3020 /* HouseDetailSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753485F2719DEB3000E3020 /* HouseDetailSectionType.swift */; };
+		175348632719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175348622719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift */; };
+		17534866271A4C32000E3020 /* HouseAttributeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */; };
+		17534868271A6E80000E3020 /* LeadershipCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534867271A6E80000E3020 /* LeadershipCellViewModel.swift */; };
+		1753486A271A6F2E000E3020 /* LeadershipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17534869271A6F2E000E3020 /* LeadershipCollectionViewCell.swift */; };
+		1753486C271A82D1000E3020 /* SwornMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1753486B271A82D1000E3020 /* SwornMemberCollectionViewCell.swift */; };
 		177258EE27186023005CD4EC /* HouseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258ED27186023005CD4EC /* HouseTableViewController.swift */; };
 		177258F4271890D2005CD4EC /* GOTHouseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */; };
 		177258F627189C2B005CD4EC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F527189C2B005CD4EC /* Character.swift */; };
 		177258F827189C34005CD4EC /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F727189C34005CD4EC /* House.swift */; };
 		177258FA27189D0E005CD4EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258F927189D0E005CD4EC /* Extension.swift */; };
 		177258FC27189E52005CD4EC /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258FB27189E52005CD4EC /* APICaller.swift */; };
-		177259002718A252005CD4EC /* NetworkResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177258FF2718A252005CD4EC /* NetworkResponses.swift */; };
 		177259022718DBA5005CD4EC /* HouseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177259012718DBA5005CD4EC /* HouseViewModel.swift */; };
 		17725904271902FE005CD4EC /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17725903271902FE005CD4EC /* HouseDetailViewController.swift */; };
 		342D972A212C9FC900EC6FE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 342D9729212C9FC900EC6FE7 /* AppDelegate.m */; };
@@ -47,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1753485F2719DEB3000E3020 /* HouseDetailSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailSectionType.swift; sourceTree = "<group>"; };
+		175348622719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAttributeCollectionViewCell.swift; sourceTree = "<group>"; };
+		17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAttributeViewModel.swift; sourceTree = "<group>"; };
+		17534867271A6E80000E3020 /* LeadershipCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadershipCellViewModel.swift; sourceTree = "<group>"; };
+		17534869271A6F2E000E3020 /* LeadershipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadershipCollectionViewCell.swift; sourceTree = "<group>"; };
+		1753486B271A82D1000E3020 /* SwornMemberCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwornMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		177258EC27186022005CD4EC /* GoTDemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoTDemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		177258ED27186023005CD4EC /* HouseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTableViewController.swift; sourceTree = "<group>"; };
 		177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOTHouseTableViewCell.swift; sourceTree = "<group>"; };
@@ -54,7 +65,6 @@
 		177258F727189C34005CD4EC /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		177258F927189D0E005CD4EC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		177258FB27189E52005CD4EC /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		177258FF2718A252005CD4EC /* NetworkResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponses.swift; sourceTree = "<group>"; };
 		177259012718DBA5005CD4EC /* HouseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewModel.swift; sourceTree = "<group>"; };
 		17725903271902FE005CD4EC /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		342D9725212C9FC900EC6FE7 /* GoTDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +116,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1753485E2719DE92000E3020 /* Detail View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1753485F2719DEB3000E3020 /* HouseDetailSectionType.swift */,
+			);
+			path = "Detail View Models";
+			sourceTree = "<group>";
+		};
+		175348612719EE3A000E3020 /* DetailControllerCells */ = {
+			isa = PBXGroup;
+			children = (
+				175348622719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift */,
+				17534869271A6F2E000E3020 /* LeadershipCollectionViewCell.swift */,
+				1753486B271A82D1000E3020 /* SwornMemberCollectionViewCell.swift */,
+			);
+			path = DetailControllerCells;
+			sourceTree = "<group>";
+		};
+		17534864271A4C18000E3020 /* DetailViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				17534865271A4C32000E3020 /* HouseAttributeViewModel.swift */,
+				17534867271A6E80000E3020 /* LeadershipCellViewModel.swift */,
+			);
+			path = DetailViewModels;
+			sourceTree = "<group>";
+		};
 		177258E627185631005CD4EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				177259012718DBA5005CD4EC /* HouseViewModel.swift */,
+				17534864271A4C18000E3020 /* DetailViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -151,6 +189,7 @@
 				34C26874212DE81A0086A8CA /* HouseTableViewCell.h */,
 				34C26875212DE81A0086A8CA /* HouseTableViewCell.m */,
 				177258F3271890D2005CD4EC /* GOTHouseTableViewCell.swift */,
+				175348612719EE3A000E3020 /* DetailControllerCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +203,7 @@
 				342D975B212C9FEC00EC6FE7 /* GOTHouse.m */,
 				177258F727189C34005CD4EC /* House.swift */,
 				177258F527189C2B005CD4EC /* Character.swift */,
-				177258FF2718A252005CD4EC /* NetworkResponses.swift */,
+				1753485E2719DE92000E3020 /* Detail View Models */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,13 +394,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175348632719EE5B000E3020 /* HouseAttributeCollectionViewCell.swift in Sources */,
 				177258F627189C2B005CD4EC /* Character.swift in Sources */,
+				1753486C271A82D1000E3020 /* SwornMemberCollectionViewCell.swift in Sources */,
 				342D972D212C9FC900EC6FE7 /* ViewController.m in Sources */,
+				17534868271A6E80000E3020 /* LeadershipCellViewModel.swift in Sources */,
 				342D9738212C9FCA00EC6FE7 /* main.m in Sources */,
 				34C26876212DE81A0086A8CA /* HouseTableViewCell.m in Sources */,
 				177258FA27189D0E005CD4EC /* Extension.swift in Sources */,
-				177259002718A252005CD4EC /* NetworkResponses.swift in Sources */,
 				177258EE27186023005CD4EC /* HouseTableViewController.swift in Sources */,
+				175348602719DEB3000E3020 /* HouseDetailSectionType.swift in Sources */,
+				17534866271A4C32000E3020 /* HouseAttributeViewModel.swift in Sources */,
 				177259022718DBA5005CD4EC /* HouseViewModel.swift in Sources */,
 				342D972A212C9FC900EC6FE7 /* AppDelegate.m in Sources */,
 				177258FC27189E52005CD4EC /* APICaller.swift in Sources */,
@@ -370,6 +413,7 @@
 				342D975C212C9FEC00EC6FE7 /* GOTHouse.m in Sources */,
 				177258F827189C34005CD4EC /* House.swift in Sources */,
 				177258F4271890D2005CD4EC /* GOTHouseTableViewCell.swift in Sources */,
+				1753486A271A6F2E000E3020 /* LeadershipCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,9 @@ final class APICaller {
         request(path: Endpoints.houseUrl, characterId: nil, expecting: [House].self, completion: completion)
     }
     
-    public func fetchCharacter(){
+    public func fetchCharacter(characterUrl: String, completion: @escaping(Result<Character, Error>) -> Void){
+        
+        request(path: .baseCharacterUrl, characterId: characterUrl, expecting: Character.self, completion: completion)
         
     }
     //MARK: - private
@@ -40,42 +42,39 @@ final class APICaller {
                                      expecting: T.Type,
                                      completion: @escaping(Result<T, Error>) -> Void){
         
-        guard let url = URL(string: path.rawValue) else {
+        var urlPath: String {
+            return path == .houseUrl ? path.rawValue : characterId!
+        }
+        
+        guard let url = URL(string: urlPath) else {
             ///invalid url
             completion(.failure(APIError.invalidURL))
             return
         }
         
-        switch path {
-        case .houseUrl:
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
             
-            let task = URLSession.shared.dataTask(with: url) { data, _, error in
-                
-                guard let data = data, error == nil else {
-                    if let error = error {
-                        
-                        completion(.failure(error))
-                    } else {
-                        
-                        completion(.failure(APIError.noDataReturned))
-                    }
-                    return
-                }
-                
-                do {
-                    let result = try JSONDecoder().decode(expecting, from: data)
-                    completion(.success(result))
-                } catch {
+            guard let data = data, error == nil else {
+                if let error = error {
+                    
                     completion(.failure(error))
+                } else {
+                    
+                    completion(.failure(APIError.noDataReturned))
                 }
-                
+                return
             }
             
-            task.resume()
+            do {
+                let result = try JSONDecoder().decode(expecting, from: data)
+                completion(.success(result))
+            } catch {
+                completion(.failure(error))
+            }
             
-        case .baseCharacterUrl:
-            break
         }
+        
+        task.resume()
         
     }
 }

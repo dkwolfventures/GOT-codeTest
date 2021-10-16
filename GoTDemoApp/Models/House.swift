@@ -17,5 +17,21 @@ struct House: Codable {
     let ancestralWeapons: [String]
     let cadetBranches: [String]
     let swornMembers: [String]
-}
+    
+    func houseAttributes() -> [String:String]{
+        var results = [String:String]()
+        
+        results = [
+            "Members" : "\(swornMembers.count)",
+            "Region" : region,
+            "Words" : words
+        ]
+        
+        if founded != "" {
+            results["Founded"] = founded
+        }
+        
+        return results
+    }
 
+}

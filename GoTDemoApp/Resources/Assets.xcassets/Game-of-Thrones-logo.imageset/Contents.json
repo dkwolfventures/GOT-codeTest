@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Game-of-Thrones-logo.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
