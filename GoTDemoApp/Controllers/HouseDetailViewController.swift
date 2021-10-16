@@ -226,7 +226,11 @@ extension HouseDetailViewController {
                     self?.lord = currentLord
                     
                 case .failure(_):
-                    self?.showAlert()
+                    
+                    DispatchQueue.main.async {
+                        self?.showAlert()
+                    }
+                    
                 }
             }
         }
@@ -244,7 +248,11 @@ extension HouseDetailViewController {
                     self?.heir = heir
                     
                 case .failure(_):
-                    self?.showAlert()
+                    
+                    DispatchQueue.main.async {
+                        self?.showAlert()
+                    }
+                    
                 }
             }
         }
@@ -264,7 +272,11 @@ extension HouseDetailViewController {
                     }
                     
                 case .failure(_):
-                    self?.showAlert()
+                    
+                    DispatchQueue.main.async {
+                        self?.showAlert()
+                    }
+                    
                 }
             }
         }

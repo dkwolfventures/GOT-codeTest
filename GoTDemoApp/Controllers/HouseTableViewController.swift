@@ -66,7 +66,9 @@ class HouseTableViewController: UITableViewController {
                 
             case .failure(_):
                 
-                self?.showAlert()
+                DispatchQueue.main.async {
+                    self?.showAlert()
+                }
                 
             }
         }
