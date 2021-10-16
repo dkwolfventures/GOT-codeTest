@@ -13,6 +13,7 @@ class HouseTableViewController: UITableViewController {
     //MARK: - properties
     
     private var houses: [House] = []
+    
     private var activitySpinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
         spinner.hidesWhenStopped = true
@@ -32,7 +33,6 @@ class HouseTableViewController: UITableViewController {
         configureCells()
         fetchHouses()
         
-        print(houses.count)
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,15 +69,12 @@ class HouseTableViewController: UITableViewController {
                 self?.showAlert()
                 
             }
-            
         }
-        
     }
     
     private func configureCells(){
         
         tableView.register(GOTHouseTableViewCell.self, forCellReuseIdentifier: GOTHouseTableViewCell.identifier)
-        
     }
     
     private func goToHouse(_ house: House){
@@ -86,7 +83,6 @@ class HouseTableViewController: UITableViewController {
         vc.title = house.name.replacingOccurrences(of: "House ", with: "")
         
         show(vc, sender: self)
-        
     }
     
     private func showAlert(){
