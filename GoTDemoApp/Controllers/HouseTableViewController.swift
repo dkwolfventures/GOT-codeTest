@@ -50,22 +50,24 @@ class HouseTableViewController: UITableViewController {
         
         activitySpinner.startAnimating()
         
-        APICaller.shared.fetchHouses { result in
+        APICaller.shared.fetchHouses { [weak self] result in
             
             switch result {
             case .success(let response):
                 
                 DispatchQueue.main.async {
-                    self.activitySpinner.stopAnimating()
+                    self?.activitySpinner.stopAnimating()
                 }
-                self.houses = response
+                self?.houses = response
                 
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
                 
             case .failure(_):
-                break
+                
+                self?.showAlert()
+                
             }
             
         }
@@ -85,6 +87,19 @@ class HouseTableViewController: UITableViewController {
         
         show(vc, sender: self)
         
+    }
+    
+    private func showAlert(){
+        
+        let alert = UIAlertController(title: "Uh Oh!", message: "There was an issue loading the data for this page. Would you like to try again?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Reload", style: .default, handler: { [weak self] _ in
+            self?.fetchHouses()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
     }
 
     // MARK: - Table view data source

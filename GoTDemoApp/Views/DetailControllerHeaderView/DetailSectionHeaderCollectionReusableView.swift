@@ -40,7 +40,7 @@ class DetailSectionHeaderCollectionReusableView: UICollectionReusableView {
     
     //MARK: - helpers
     
-    public func configure(with index: Int){
+    public func configure(with index: Int, _ noMembers: Bool?){
         
         switch index {
         case 0:
@@ -50,8 +50,14 @@ class DetailSectionHeaderCollectionReusableView: UICollectionReusableView {
             headerLabel.text = "Leadership"
             
         case 2:
+            
             headerLabel.text = "Sworn Members"
             
+            if let noMembers = noMembers {
+                if noMembers {
+                    headerLabel.text = "No Sworn Members"
+                }
+            }
         default:
             fatalError()
         }

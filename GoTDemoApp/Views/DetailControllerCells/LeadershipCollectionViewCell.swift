@@ -50,7 +50,7 @@ class LeadershipCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(nameLabel)
         contentView.addSubview(dobLabel)
         contentView.addSubview(titlesLabel)
-        
+        clipsToBounds = true
         backgroundColor = .secondarySystemBackground
         layer.cornerRadius = 8
     }

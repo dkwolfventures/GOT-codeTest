@@ -71,6 +71,19 @@ class HouseDetailViewController: UIViewController {
         
     }
     
+    private func showAlert(){
+        
+        let alert = UIAlertController(title: "Uh Oh!", message: "There was an issue loading the data for this page. Would you like to try again?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Reload", style: .default, handler: { [weak self] _ in
+            self?.fetchCharacters()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
+    }
+
 }
 
 //MARK: - UICollectionViewDelegate & UICollectionViewDataSource
@@ -170,15 +183,15 @@ extension HouseDetailViewController: UICollectionViewDelegate, UICollectionViewD
         
         case 0:
             
-            header.configure(with: section)
+            header.configure(with: section, nil)
             return header
         case 1:
             
-            header.configure(with: section)
+            header.configure(with: section, nil)
             return header
         case 2:
             
-            header.configure(with: section)
+            header.configure(with: section, true)
             return header
         default:
             fatalError()
@@ -202,7 +215,7 @@ extension HouseDetailViewController {
 
         if currentLord {
             characterGroup.enter()
-            APICaller.shared.fetchCharacter(characterUrl: house.currentLord) { result in
+            APICaller.shared.fetchCharacter(characterUrl: house.currentLord) { [weak self] result in
                 
                 defer {
                     characterGroup.leave()
@@ -210,17 +223,17 @@ extension HouseDetailViewController {
                 
                 switch result {
                 case .success(let currentLord):
-                    self.lord = currentLord
+                    self?.lord = currentLord
                     
-                case .failure(let error):
-                    print(error.localizedDescription)
+                case .failure(_):
+                    self?.showAlert()
                 }
             }
         }
         
         if currentHeir {
             characterGroup.enter()
-            APICaller.shared.fetchCharacter(characterUrl: house.heir) { result in
+            APICaller.shared.fetchCharacter(characterUrl: house.heir) { [weak self] result in
                 
                 defer {
                     characterGroup.leave()
@@ -228,10 +241,10 @@ extension HouseDetailViewController {
                 
                 switch result {
                 case .success(let heir):
-                    self.heir = heir
+                    self?.heir = heir
                     
-                case .failure(let error):
-                    print(error.localizedDescription)
+                case .failure(_):
+                    self?.showAlert()
                 }
             }
         }
@@ -250,8 +263,8 @@ extension HouseDetailViewController {
                         allCharacters.append(swornMember)
                     }
                     
-                case .failure(let error):
-                    print(error.localizedDescription)
+                case .failure(_):
+                    self?.showAlert()
                 }
             }
         }

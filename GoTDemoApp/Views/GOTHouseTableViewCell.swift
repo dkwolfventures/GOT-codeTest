@@ -73,7 +73,7 @@ class GOTHouseTableViewCell: UITableViewCell {
         membersIcon.frame = CGRect(x: contentView.width - memberIconSize.width - standardPadding , y: contentView.height/2 - membersIcon.height/2, width: memberIconSize.width, height: memberIconSize.height)
         
         membersLabel.sizeToFit()
-        membersLabel.frame = CGRect(x: membersIcon.left + membersIcon.width/2 - 5, y: membersIcon.bottom, width: membersLabel.width, height: membersLabel.height)
+        membersLabel.centerX(inView: membersIcon, topAnchor: membersIcon.bottomAnchor, paddingTop: 0)
         
     }
     

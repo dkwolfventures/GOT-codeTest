@@ -4,95 +4,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C40-5Q-FFD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HouseCell" rowHeight="60" id="fnO-X9-fFJ" customClass="HouseTableViewCell">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fnO-X9-fFJ" id="Vmn-3B-0rr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZh-r6-sTk">
-                                                    <rect key="frame" x="15" y="4" width="345" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="Sog-Mx-Nug"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="House Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXp-k5-dAP">
-                                                    <rect key="frame" x="16" y="28" width="343" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="3Vs-N4-vDE"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="eZh-r6-sTk" firstAttribute="leading" secondItem="Vmn-3B-0rr" secondAttribute="leading" constant="15" id="48l-du-fun"/>
-                                                <constraint firstItem="iXp-k5-dAP" firstAttribute="top" secondItem="eZh-r6-sTk" secondAttribute="bottom" constant="3" id="9hH-xR-c5L"/>
-                                                <constraint firstItem="iXp-k5-dAP" firstAttribute="leading" secondItem="Vmn-3B-0rr" secondAttribute="leadingMargin" id="YPr-mK-bZP"/>
-                                                <constraint firstAttribute="trailing" secondItem="eZh-r6-sTk" secondAttribute="trailing" constant="15" id="kOU-p0-NN9"/>
-                                                <constraint firstItem="eZh-r6-sTk" firstAttribute="top" secondItem="Vmn-3B-0rr" secondAttribute="top" constant="4" id="o0U-AA-Xwl"/>
-                                                <constraint firstItem="iXp-k5-dAP" firstAttribute="trailing" secondItem="Vmn-3B-0rr" secondAttribute="trailingMargin" id="vkl-RR-Jc3"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="houseName" destination="eZh-r6-sTk" id="UY2-85-YXi"/>
-                                            <outlet property="houseWords" destination="iXp-k5-dAP" id="3PE-Wo-k1O"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3Qd-3P-Mb4"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7gd-62-tJm"/>
-                                </connections>
-                            </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PGg-RU-Xum">
-                                <rect key="frame" x="169" y="315" width="37" height="37"/>
-                                <color key="color" red="0.80000000000000004" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="PGg-RU-Xum" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Zi-mK-iBW"/>
-                            <constraint firstItem="C40-5Q-FFD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dwt-y1-Zvr"/>
-                            <constraint firstItem="PGg-RU-Xum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EWF-Lo-0Pz"/>
-                            <constraint firstItem="C40-5Q-FFD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KS5-Wt-90x"/>
-                            <constraint firstItem="C40-5Q-FFD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ObZ-9v-jGi"/>
-                            <constraint firstItem="C40-5Q-FFD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VOS-5u-gZF"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="3C8-iM-woz"/>
-                    <connections>
-                        <outlet property="activitySpinner" destination="PGg-RU-Xum" id="9Ez-7i-YUN"/>
-                        <outlet property="tableView" destination="C40-5Q-FFD" id="8E5-Bg-1b6"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1262" y="-602"/>
-        </scene>
         <!--House Table View Controller-->
         <scene sceneID="lWG-nk-FZc">
             <objects>
@@ -102,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g9y-47-KCj">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="g9y-47-KCj">
                                 <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g9y-47-KCj" id="ym8-Mf-qgQ">
