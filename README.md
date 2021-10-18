@@ -1,4 +1,4 @@
-# Vaporstream Coding Exercise
+#  Coding Test 
 
 The objective of this excercise is to finish a partially completed application for connecting to an open API (https://anapioficeandfire.com/) providing information about Houses and Characters from the Game of Thrones universe. The completed application should load a list of Houses into a tableview on its initial view, and selecting a House from that table should display a detail view that displays more information about that house, as well as information about a character associated with that house.
 
